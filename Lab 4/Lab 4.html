@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Lab 4 WebTech E18CSE187 Tanvi Penumudy</title>
+    
+  </head>
+  <body>
+    <button type="button" name="button" onclick="func1()">1. Replace Elements in Array</button><br><br>
+    <button type="button" name="button" onclick="func2()">2. Convert to Digits</button><br><br>
+    <button type="button" name="button" onclick="func3()">3. Remove Elements from Left</button><br><br>
+    <button type="button" name="button" onclick="func4()">4. Remove Elements from Right</button><br><br>
+    <button type="button" name="button" onclick="func5()">5. Weekend or Weekday</button>
+    <h3>Final Output:</h3>
+    <p id = "output"></p>
+    <script> 
+  function func1(){
+  var arrayInput = window.prompt("Enter space seperate values of array:\nExample: 1 2 3 4 5");
+  var arr = arrayInput.split(" ");
+  var num = window.prompt("Enter the new number: ");
+  var output = document.getElementById("output");
+  output.innerHTML = "Original Array: "+arr.toString()+"<br>";
+  output.innerHTML += "New number: "+num+"<br>";
+  output.innerHTML += "Values of Array after replacement: ";
+  for(let i = 0;i<arr.length;i++){
+    arr[i] = num;
+  }output.innerHTML += arr.toString();
+
+}
+
+function func2(){
+
+  var array = new Array();
+  var num = parseInt(window.prompt("Enter the number: "));
+  var output = document.getElementById("output");
+  output.innerHTML = "Original Number: "+num+"<br>";
+  output.innerHTML += "Digits of Number: ";
+  while(num>0){
+    array.unshift(num%10);
+    num = parseInt(num/10);
+  }output.innerHTML += array.toString();
+
+}
+
+function func3(){
+  var arrayInput = window.prompt("Enter space seperate values of array:\n Example: 1 2 3 4 5");
+  var arr = arrayInput.split(" ");
+  var num = window.prompt("Enter the number to be removed: ");
+  var N = arr.length;
+  var output = document.getElementById("output");
+  output.innerHTML = "Original Array: "+arr.toString()+"<br>";
+  output.innerHTML += "Number need to be deleted: "+num+"<br>";
+  output.innerHTML += "Elements of Array after deleting from left:  ";
+  let i = 0;
+  while(i<N){
+    if(parseInt(arr[i]) == num){
+      arr.splice(i,1);
+      i--;
+      N--;
+    }
+    i++;
+  }output.innerHTML += arr.toString();
+}
+
+function func4(){
+  var arrayInput = window.prompt("Enter space seperate values of array:\n Example: 1 2 3 4 5");
+  var arr = arrayInput.split(" ");
+  var num = window.prompt("Enter the number to be removed: ");
+  var N = arr.length;
+  var output = document.getElementById("output");
+  output.innerHTML = "Original Array: "+arr.toString()+"<br>";
+  output.innerHTML += "Number need to be deleted: "+num+"<br>";
+  output.innerHTML += "Elements of Array after deleting from right:  ";
+  let i = N-1;
+  while(i>-1){
+    if(parseInt(arr[i]) == num){
+      arr.splice(i,1);
+      i++;
+    }
+    i--;
+  }output.innerHTML += arr.toString();
+}
+
+function func5(){
+  var day = parseInt(window.prompt("Enter day: "));
+  var month = parseInt(window.prompt("Enter month:\nExample:\nJan: 1\nFeb: 2\n...\nDec: 12"))-1;
+  var year = parseInt(window.prompt("Enter year: "));
+  var output = document.getElementById("output");
+  var date = new Date(year,month,day);
+  if(date.getDay() == 5 || date.getDay() == 6){
+    output.innerHTML = "Today is weekend";
+  }else{
+    output.innerHTML = "Today is weekday";
+  }
+}
+  </script>
+  </body>
+</html>
