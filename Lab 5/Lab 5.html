@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Lab 5 WebTech E18CSE187 Tanvi Penumudy</title>
+  <style> 
+body {
+  background-color: #EA5803;
+}
+
+div {
+  position: relative;
+}
+
+label, input {
+  position: absolute;
+  left: 40%;
+  height: 30px;
+  top: 30px;
+  font-size: 30px;
+}
+
+.Val {
+  left: 48%;
+}
+
+button {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+}
+
+.to {
+  left: 25%;
+}
+
+.from {
+  right: 5%;
+}
+
+.decimal {
+  top: 125px;
+}
+
+.octal {
+  top: 250px;
+}
+
+.hexa {
+  top: 375px;
+}
+
+span, p {
+  position: absolute;
+  left: 40%;
+  height: 30px;
+  top: 100px;
+  font-size: 30px;
+  margin-top: 30px;
+} </style>
+</head>
+
+<body>
+  <div>
+    <label>Input: </label>
+    <input type="text" id="input" class="Val">
+  </div>
+  <div>
+    <button type="button" class="to decimal" onclick="document.getElementById('output').innerHTML = binToDec(document.getElementById('input').value)">Binary to Decimal</button>
+    <button type="button" class="to octal" onclick="document.getElementById('output').innerHTML = binToOct(document.getElementById('input').value)">Binary to Octal</button>
+    <button type="button" class="to hexa" onclick="document.getElementById('output').innerHTML = binToHex(document.getElementById('input').value)">Binary to Hexadecimal</button>
+    <button type="button" class="from decimal" onclick="document.getElementById('output').innerHTML = decToBin(document.getElementById('input').value)">Decimal to Binary</button>
+    <button type="button" class="from octal" onclick="document.getElementById('output').innerHTML = octToBin(document.getElementById('input').value)">Octal to Binary</button>
+    <button type="button" class="from hexa" onclick="document.getElementById('output').innerHTML = hexTOBin(document.getElementById('input').value)">Hexadecimal to Binary</button>
+    <span>Output: </span>
+    <p id="output" class="Val"></p>
+  </div>
+<script> 
+function binToDec(val) {
+  if (val == "0") {
+    return val;
+  }
+  var output = parseInt("0");
+  var factor = 1;
+  for (let i = val.length - 1; i > -1; i--) {
+    output += val.charAt(i) * factor;
+    factor *= 2;
+  }
+  return output;
+}
+
+function binToOct(val) {
+  if (val == "0") {
+    return val;
+  }
+  var len = val.length;
+  if (len % 3) {
+    let extend = 3 - len % 3;
+    val = "0".repeat(extend) + val, len += extend;
+  }
+  var output = "";
+  for (let i = 0; i < len; i += 3) {
+    output += binToDec(val.slice(i, i + 3)).toString();
+  }
+  return output;
+}
+
+function binToHex(val) {
+  if (val == "0") {
+    return val;
+  }
+  var data = {
+    "1010": "A",
+    "1011": "B",
+    "1100": "C",
+    "1101": "D",
+    "1110": "E",
+    "1111": "F"
+  };
+  var len = val.length;
+  if (len % 4) {
+    let extend = 4 - len % 4;
+    val = "0".repeat(extend) + val, len += extend;
+  }
+  var output = "";
+  for (let i = 0; i < len; i += 4) {
+    let temp = val.slice(i, i + 4);
+    switch (temp) {
+      case "1010":
+      case "1011":
+      case "1100":
+      case "1101":
+      case "1110":
+      case "1111":
+        output += data[temp];
+        break;
+      default:
+        output += binToDec(temp).toString();
+        break;
+    }
+  }
+  return output;
+}
+
+function decToBin(val) {
+  if (val == "0") {
+    return val;
+  }
+  val = Number(val);
+  var output = "";
+  while (val > 0) {
+    output = (val % 2).toString() + output;
+    val = parseInt(val / 2);
+  }
+  return output;
+}
+
+function octToBin(val) {
+  if (val == "0") {
+    return val;
+  }
+  var output = "";
+  for (let i = 0; i < val.length; i++) {
+    output += extend(decToBin(val.charAt(i)), 3);
+  }
+  var i = output.indexOf("1");
+  if (i > 0) {
+    output = output.slice(i);
+  }
+  return output;
+}
+
+function extend(val, len) {
+  if (val.length < len) {
+    val = "0".repeat(len - val.length) + val;
+  }
+  return val;
+}
+
+function hexTOBin(val) {
+  if (val == "0") {
+    return val;
+  }
+  var data = {
+    "A": "1010",
+    "B": "1011",
+    "C": "1100",
+    "D": "1101",
+    "E": "1110",
+    "F": "1111"
+  };
+  val = val.toUpperCase();
+  var output = "";
+  for (let i = 0; i < val.length; i++) {
+    let temp = val.charAt(i);
+    switch (temp) {
+      case 'A':
+      case 'B':
+      case 'C':
+      case 'D':
+      case 'E':
+      case 'F':
+        output += data[temp];
+        break;
+      default:
+        output += extend(decToBin(val.charAt(i)), 4);
+        break;
+    }
+  }
+  var i = output.indexOf("1");
+  if (i > 0) {
+    output = output.slice(i);
+  }
+  return output;
+}
+</script>
+
+</body>
+
+</html>
