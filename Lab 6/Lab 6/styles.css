@@ -1,0 +1,171 @@
+body {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
+.indexBody {
+  background-image: url(https://www.aliengen.com/uploads/Information-systems-people-data-processes-aliengen-2.jpg);
+}
+
+.BEBody {
+  background-image: url(https://www.eng.nus.edu.sg/wp-content/uploads/sites/6/2019/11/UG-background.jpg);
+}
+
+.ITBody {
+  background-image: url(https://img.freepik.com/free-vector/blue-copy-space-digital-background_23-2148821698.jpg?size=626&ext=jpg);
+}
+
+.CSEBody {
+  background-image: url(https://marketingweek.imgix.net/content/uploads/2015/03/Digital_tech_breaker.png?auto=compress,format&q=60&w=980&h=400);
+}
+
+.ECBody {
+  background-image: url(https://wallpapercave.com/wp/wp3720963.jpg);
+}
+
+.EEBody {
+  background-image: url(https://wallpaperaccess.com/full/536538.jpg);
+}
+
+.SSCBody {
+  background-image: url(https://w7.pngwing.com/pngs/492/606/png-transparent-india-national-skill-development-corporation-ministry-of-skill-development-and-entrepreneurship-sector-skills-councils-skill-development-blue-text-logo-thumbnail.png);
+}
+
+.AgricultureBody{
+  background-image: url(https://education.icar.gov.in/images/background-2.jpg);
+}
+
+.AutomotiveBody{
+  background-image: url(https://www.asdc.org.in/uploads/1458638263080520090337.png);
+}
+
+.FoodIndustryBody{
+  background-image: url(https://foodprocessingindia.gov.in/uploads/whats_new/MoFPI1612411293istockphoto-1155240408-612x612.jpg);
+}
+
+.ManagementBody{
+  background-image: url(https://www.asiapacifichealthcaremanagement.org/wp-content/uploads/2020/01/healthcare-background.jpg);
+}
+
+.IBBody {
+  background-image: url(https://media.istockphoto.com/vectors/world-travel-background-vector-id922953742?k=20&m=922953742&s=612x612&w=0&h=3-OECqx-t6f4C20Zxdb_NIibuEpHrf3rhjHExQd1UWQ=);
+}
+
+.MMBody {
+  background-image: url(https://wallpaper.dog/large/20407831.png);
+}
+
+.HRBody {
+  background-image: url(https://media.istockphoto.com/photos/selecting-person-and-building-team-business-people-relationship-picture-id1140300365?k=20&m=1140300365&s=612x612&w=0&h=NYTpN2E1CQTFcz6L5ea9eU8ospKgsVkY2LwGwKcIEGY=);
+}
+
+label {
+  font-size: 50px;
+}
+
+.indexLabel {
+  color: #69DADB;
+}
+
+.BELabel, .ManagementLabel {
+  color: #FF865E;
+}
+
+.ITLabel, .CSELabel, .ECLabel, .EELabel, .MMLabel, .FoodIndustryLabel {
+  color: white;
+}
+
+select {
+  display: block;
+  position: relative;
+  margin: 3% 0 5%;
+}
+
+#selectCourse {
+  left: 46%;
+}
+
+#selectBEBranch {
+  left: 48%;
+  margin-bottom: 7%;
+}
+
+#selectSSCBranch{
+  left: 46.3%;
+}
+
+#selectManagementBranch{
+  left: 48.2%;
+}
+
+.BETable {
+  margin: 7% 20%;
+}
+
+.ITTable {
+  background-color: #98fb98;
+  border: 1px solid white;
+}
+
+.CSETable {
+  background-color: #FFFD95;
+  border: 1px solid #2C2891;
+}
+
+.ECTable {
+  background-color: #D98C00;
+  border: 1px solid #E02401;
+}
+
+.EETable {
+  background-color: #69DADB;
+  border: 1px solid #D98C00;
+}
+
+.SSCTable{
+  margin: 7% 36%;
+}
+
+.AgricultureTable{
+  border: 1px solid black;
+}
+
+.AutomotiveTable{
+  background-color: #CDF2CA;
+  border: 1px solid #F9F3DF;
+}
+
+.FoodIndustryTable{
+  background-color: #C89595;
+  border: 1px solid #EDEDED;
+}
+
+.ManagementTable{
+  margin: 7% 28%;
+}
+
+.IBTable{
+  background-color: #FF865E;
+  border: 1px solid #FEE440;
+}
+
+.MMTable {
+  background-color: #334756;
+  border: 1px solid #F0A500;
+  color: white;
+}
+
+.HRTable {
+  background-color: #FFB319;
+  border: 1px solid #FFEBA1;
+}
+
+div {
+  position: relative;
+  margin-top: 12%;
+}
+
+hr {
+  width: 20%;
+}
