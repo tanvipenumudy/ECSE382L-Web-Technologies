@@ -1,0 +1,38 @@
+body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSySHnSsKfs_lLOLF6SN6jdy_hu-0Za_pr9YA&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Pacifico', cursive;
+}
+#headings{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+#navigations{
+    text-align: center;
+    width: 90%;
+}
+ul.navbar{
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+ul.navbar > li {
+    text-align: center;
+    display: table-cell;
+    
+}
+ul.navbar > li >a {
+    text-decoration: none;
+}
+#welcome{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: 5%;
+}
+#aboutUs{
+    text-align: right;
+    font-size: 20px;
+}

@@ -1,0 +1,26 @@
+body{
+    background-image: url('https://static.nextstepbeauty.co.uk/uploads/2016/12/Offer-Page-Christmas-Deals-Background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 30px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+}
+.header-container{
+    display: flex;
+}
+.card{
+    padding: 30px;
+    border-radius: 30px;
+    border-style: solid;
+    margin: 10px 20px;
+    border-width: 2px;
+    border-color: white;
+    width: fit-content;
+    background-color: rgba(225, 224, 224, 0.446);
+    color:rgb(122, 221, 41)
+}
+.card-container{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}

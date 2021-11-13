@@ -1,0 +1,31 @@
+body{
+    background-image: url('https://ds393qgzrxwzn.cloudfront.net/resize/m600x500/cat1/img/images/0/jwkvsCOubn.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    color: indigo;
+    font-family: verdana;
+}
+h2{
+    text-align: center;
+    color: indigo;
+    font-family: verdana;
+}
+.card{
+    border-radius: 30px;
+    background-color: rgba(162, 162, 162, 0.344);
+    border: 3px solid black;
+    min-height: 270px;
+    width: fit-content;
+    padding: 30px;
+    margin: auto;
+    margin-top: 140px;
+}
+fieldset{
+    border: none;
+}
+form{
+    margin: auto;
+}
